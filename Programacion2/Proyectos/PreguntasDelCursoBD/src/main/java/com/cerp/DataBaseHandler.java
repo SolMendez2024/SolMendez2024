@@ -5,7 +5,7 @@ import com.cerp.Modelo.Pregunta;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.cerp.Modelo.Ranking;
 
 public class DataBaseHandler {
     private static final String URL = "jdbc:mysql://localhost:3306/preguntas_mvc";
@@ -33,6 +33,18 @@ public class DataBaseHandler {
         }
     }
 
+    public void insertarRanking(Ranking ranking) {
+        String sql = "INSERT INTO ranking (user_id, id_preg, correccion) VALUES (?, ?, ?)";
+        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1,ranking.getUserId());    
+            stmt.setInt(2, ranking.getIdPreg());
+            stmt.setInt(3, ranking.getCorreccion());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public int consultarUltimaPregunta(){
             int ultimoId = -1;
             String sql = "SELECT MAX(id) FROM preguntas";  // Alternativa: "SELECT LAST_INSERT_ID();"
