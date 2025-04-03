@@ -31,6 +31,7 @@ public class AdminControlador implements ActionListener {
         this.modelo = modelo;
         this.vista = vista;
         this.vistaInicio = vistaInicio;
+        this.dataBaseHandler = vistaInicio.getDatabaseHandler();
 
         vista.getConfirmarButton().addActionListener(this);
         vista.getAtrasButton().addActionListener(this);
@@ -40,6 +41,9 @@ public class AdminControlador implements ActionListener {
         this.vista.actualizarIdLabel(modelo.size());
         this.vista.actualizarPreguntaField();
         this.vista.actualizarIncorrectas1Field();
+        this.vista.actualizarIncorrectas2Field();
+        this.vista.actualizarIncorrectas3Field();
+        this.vista.actualizarIncorrectas4Field();
         this.vista.actualizarCorrectaField();
 
         this.vista.addWindowListener(new WindowAdapter() {
@@ -64,10 +68,16 @@ public class AdminControlador implements ActionListener {
 
                 String pregunta = vista.getPreguntaField().getText();
                 String incorrecta1 = vista.getIncorrecta1Field().getText();
+                String incorrecta2 = vista.getIncorrecta2Field().getText();
+                String incorrecta3 = vista.getIncorrecta3Field().getText();
+                String incorrecta4 = vista.getIncorrecta4Field().getText();
                 String correcta = vista.getCorrectaField().getText();
 
                 List<String> opciones = new ArrayList<>();
                 opciones.add(incorrecta1);
+                opciones.add(incorrecta2);
+                opciones.add(incorrecta3);
+                opciones.add(incorrecta4);
                 // van el resto de incorrectas
                 Pregunta nuevaPregunta = new Pregunta(modelo.size() + 1, pregunta, correcta, opciones);
 

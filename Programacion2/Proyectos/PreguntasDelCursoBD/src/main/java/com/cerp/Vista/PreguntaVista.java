@@ -41,7 +41,7 @@ public class PreguntaVista extends JFrame {
      */
     private void initComponents() {
         // Configuración de la ventana
-        setTitle("Juego de preguntas para Programación 3 - CeRP del Suroeste - Prof. Domingo Pérez");
+        setTitle("Juego de preguntas para Programación 2 Año 2025 - CeRP del Suroeste - Prof. Domingo Pérez");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);

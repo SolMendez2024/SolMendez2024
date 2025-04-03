@@ -27,6 +27,9 @@ package com.cerp.Modelo;
         this.opciones = opciones;
     }
 
+    public Pregunta(){
+        
+    }
 
     public Pregunta(int idPregunta, String pregunta, String correcta, List<String> opciones) {
         this.idPregunta = idPregunta;

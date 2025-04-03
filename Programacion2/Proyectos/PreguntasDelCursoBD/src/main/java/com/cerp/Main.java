@@ -38,7 +38,7 @@ public class Main {
         DataBaseHandler dataBaseHandler = new DataBaseHandler();
 
         List<Pregunta> modelo = new ArrayList<>();        
-
+        
 
         //modelo = fileHandler.fileToList();
         modelo = dataBaseHandler.obtenerPreguntas();

@@ -84,21 +84,49 @@ public class AdminVista extends JFrame {
         opcionesField.setBounds(100, 80, 300, 20);
         preguntaPanel.add(opcionesField, BorderLayout.CENTER);*/
 
-        incorrecta1Label = new JLabel("Respuesta incorrecta:");
-        incorrecta1Label.setBounds(20, 80, 80, 20);
-        preguntaPanel.add(incorrecta1Label, BorderLayout.CENTER);
 
-        incorrecta1Field = new JTextField();
-        incorrecta1Field.setBounds(100, 80, 300, 20);
-        preguntaPanel.add(incorrecta1Field, BorderLayout.CENTER);
+
+
+        
 
         correctaLabel = new JLabel("Respuesta correcta:");
-        correctaLabel.setBounds(20, 110, 140, 20);
+        correctaLabel.setBounds(20, 80, 140, 20);
         preguntaPanel.add(correctaLabel, BorderLayout.CENTER);
-
         correctaField = new JTextField();
-        correctaField.setBounds(160, 110, 240, 20);
+        correctaField.setBounds(160, 80, 240, 20);
         preguntaPanel.add(correctaField, BorderLayout.CENTER);
+
+
+        incorrecta1Label = new JLabel("Respuesta incorrecta1:");
+        incorrecta1Label.setBounds(20, 110, 80, 20);
+        preguntaPanel.add(incorrecta1Label, BorderLayout.CENTER);
+        incorrecta1Field = new JTextField();
+        incorrecta1Field.setBounds(100, 110, 300, 20);
+        preguntaPanel.add(incorrecta1Field, BorderLayout.CENTER);
+
+        incorrecta2Label = new JLabel("Respuesta incorrecta2:");
+        incorrecta2Label.setBounds(20, 140, 80, 20);
+        preguntaPanel.add(incorrecta2Label, BorderLayout.CENTER);
+        incorrecta2Field = new JTextField();
+        incorrecta2Field.setBounds(100, 140, 300, 20);
+        preguntaPanel.add(incorrecta2Field, BorderLayout.CENTER);
+
+        incorrecta3Label = new JLabel("Respuesta incorrecta3:");
+        incorrecta3Label.setBounds(20, 170, 80, 20);
+        preguntaPanel.add(incorrecta3Label, BorderLayout.CENTER);
+        incorrecta3Field = new JTextField();
+        incorrecta3Field.setBounds(100, 170, 300, 20);
+        preguntaPanel.add(incorrecta3Field, BorderLayout.CENTER);
+
+        incorrecta4Label = new JLabel("Respuesta incorrecta4:");
+        incorrecta4Label.setBounds(20, 200, 80, 20);
+        preguntaPanel.add(incorrecta4Label, BorderLayout.CENTER);
+        incorrecta4Field = new JTextField();
+        incorrecta4Field.setBounds(100, 200, 300, 20);
+        preguntaPanel.add(incorrecta4Field, BorderLayout.CENTER);
+
+
+        
 
         add(preguntaPanel, BorderLayout.CENTER);
 
@@ -167,7 +195,17 @@ public class AdminVista extends JFrame {
     public JTextField getIncorrecta1Field() {
         return incorrecta1Field;
     }
+    public JTextField getIncorrecta2Field() {
+        return incorrecta2Field;
+    }
 
+    public JTextField getIncorrecta3Field() {
+        return incorrecta3Field;
+    }
+
+    public JTextField getIncorrecta4Field() {
+        return incorrecta4Field;
+    }
     /*public JTextField getOpcionesField() {
         return opcionesField;
     }*/
@@ -219,7 +257,15 @@ public class AdminVista extends JFrame {
     public void actualizarIncorrectas1Field() {
         incorrecta1Field.setText("");
     }
-
+    public void actualizarIncorrectas2Field() {
+        incorrecta2Field.setText("");
+    }
+    public void actualizarIncorrectas3Field() {
+        incorrecta3Field.setText("");
+    }
+    public void actualizarIncorrectas4Field() {
+        incorrecta4Field.setText("");
+    }
     /**
      * Actualiza el campo de texto de la respuesta correcta con la respuesta correcta de la pregunta actual del modelo.
      */

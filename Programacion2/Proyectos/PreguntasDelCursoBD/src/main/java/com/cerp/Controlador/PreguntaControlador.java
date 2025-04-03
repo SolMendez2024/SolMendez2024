@@ -48,7 +48,7 @@ public class PreguntaControlador implements ActionListener {
         this.vista.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                vistaInicio.getControlador().guardarPreguntas();
+               // vistaInicio.getControlador().guardarPreguntas();
                 System.exit(0);
             }
         });
@@ -72,7 +72,8 @@ public class PreguntaControlador implements ActionListener {
             if (i == correctButtonIndex) {
                 continue;
             }
-            String option = preguntaVisible.getOpciones()[optionIndex];
+
+            String option = preguntaVisible.getOpciones().get(optionIndex);
             vista.getRespuestaButtons()[i].setText(option);  
 
             optionIndex++;
@@ -117,10 +118,10 @@ public class PreguntaControlador implements ActionListener {
         } else if (e.getSource() == vista.getConfirmarButton()) {
             int selectedAnswer = Integer.parseInt(vista.getButtonGroup().getSelection().getActionCommand());
                 if (selectedAnswer==this.correctIndex){
-                    vista.mostrarMensajeConfirmacion("Respuesta correctamente.");
+                    vista.mostrarMensajeConfirmacion("Respuesta correcta.");
                     //JOptionPane.showMessageDialog(vista, "¡Correcto!", "Resultado", JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    vista.mostrarMensajeError("Respuesta INcorrecta, vuelve a intentarlo!");
+                    vista.mostrarMensajeError("Respuesta Incorrecta, vuelve a intentarlo!");
                     //JOptionPane.showMessageDialog(vista, "¡Incorrecto!" + selectedAnswer + this.correctIndex , "Resultado", JOptionPane.ERROR_MESSAGE);
                 }
             

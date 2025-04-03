@@ -4,6 +4,7 @@ com\cerp\Vista\InicioVista$1.class
 com\cerp\Vista\InicioVista.class
 com\cerp\Modelo\Preguntas.class
 com\cerp\Randomizer.class
+com\cerp\DataBaseHandler.class
 com\cerp\Main.class
 com\cerp\Vista\AdminVista.class
 com\cerp\Controlador\AdminControlador.class

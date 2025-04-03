@@ -36,7 +36,7 @@ import com.cerp.Controlador.InicioControlador;
          this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                controlador.guardarPreguntas();
+               // controlador.guardarPreguntas();
                 System.exit(0);
             }
         });
