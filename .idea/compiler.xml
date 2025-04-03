@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="PreguntasDelCursoMVC" />
         <module name="PreguntasMVC" />
+        <module name="PreguntasDelCursoBD" />
+        <module name="PreguntasDelCursoMVC" />
         <module name="proyecto_clicks" />
       </profile>
     </annotationProcessing>

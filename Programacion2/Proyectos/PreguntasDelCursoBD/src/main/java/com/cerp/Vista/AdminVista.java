@@ -22,10 +22,20 @@ public class AdminVista extends JFrame {
     private JLabel idLabel;
     private JLabel preguntaLabel;
     private JTextField preguntaField;
-    private JLabel opcionesLabel;
-    private JTextField opcionesField;
+    //private JLabel opcionesLabel;
+    //private JTextField opcionesField;
     private JLabel correctaLabel;
     private JTextField correctaField;
+
+    private JLabel incorrecta1Label;
+    private JTextField incorrecta1Field;
+    private JLabel incorrecta2Label;
+    private JTextField incorrecta2Field;
+    private JLabel incorrecta3Label;
+    private JTextField incorrecta3Field;
+    private JLabel incorrecta4Label;
+    private JTextField incorrecta4Field;
+
     private JButton confirmarButton;
     private JButton atrasButton;
     private JButton limpiarButton;
@@ -66,13 +76,21 @@ public class AdminVista extends JFrame {
         preguntaField.setBounds(100, 50, 300, 20);
         preguntaPanel.add(preguntaField, BorderLayout.CENTER);
 
-        opcionesLabel = new JLabel("Opciones:");
+        /*opcionesLabel = new JLabel("Opciones:");
         opcionesLabel.setBounds(20, 80, 80, 20);
         preguntaPanel.add(opcionesLabel, BorderLayout.CENTER);
 
         opcionesField = new JTextField();
         opcionesField.setBounds(100, 80, 300, 20);
-        preguntaPanel.add(opcionesField, BorderLayout.CENTER);
+        preguntaPanel.add(opcionesField, BorderLayout.CENTER);*/
+
+        incorrecta1Label = new JLabel("Respuesta incorrecta:");
+        incorrecta1Label.setBounds(20, 80, 80, 20);
+        preguntaPanel.add(incorrecta1Label, BorderLayout.CENTER);
+
+        incorrecta1Field = new JTextField();
+        incorrecta1Field.setBounds(100, 80, 300, 20);
+        preguntaPanel.add(incorrecta1Field, BorderLayout.CENTER);
 
         correctaLabel = new JLabel("Respuesta correcta:");
         correctaLabel.setBounds(20, 110, 140, 20);
@@ -146,9 +164,13 @@ public class AdminVista extends JFrame {
         return preguntaField;
     }
 
-    public JTextField getOpcionesField() {
-        return opcionesField;
+    public JTextField getIncorrecta1Field() {
+        return incorrecta1Field;
     }
+
+    /*public JTextField getOpcionesField() {
+        return opcionesField;
+    }*/
 
     public JTextField getCorrectaField() {
         return correctaField;
@@ -190,8 +212,12 @@ public class AdminVista extends JFrame {
     /**
      * Actualiza el campo de texto de opciones con las opciones de la pregunta actual del modelo.
      */
-    public void actualizarOpcionesField() {
+    /*public void actualizarOpcionesField() {
         opcionesField.setText("");
+    }*/
+
+    public void actualizarIncorrectas1Field() {
+        incorrecta1Field.setText("");
     }
 
     /**

@@ -34,20 +34,15 @@ public class Main {
         
         // Crear instancia de FileHandler para cargar las preguntas desde preguntas.data
         //FileHandler<Pregunta> fileHandler = new FileHandler<Pregunta>("D:\\_VSCode\\_Programacion3-JAVA\\Curso-JAVA\\Proyectos\\PreguntasDelCursoMVC\\preguntas.data");
-        FileHandler<Pregunta> fileHandler = new FileHandler<Pregunta>("D:\\_VSCode\\_Programacion2-JAVA\\Proyectos\\PreguntasDelCursoMVC\\src\\main\\resources\\preguntas.data");
-
+        //FileHandler<Pregunta> fileHandler = new FileHandler<Pregunta>("D:\\_VSCode\\_Programacion2-JAVA\\Proyectos\\PreguntasDelCursoBD\\src\\main\\resources\\preguntas.data");
+        DataBaseHandler dataBaseHandler = new DataBaseHandler();
 
         List<Pregunta> modelo = new ArrayList<>();        
 
-        try {
-            modelo = fileHandler.fileToList();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+
+        //modelo = fileHandler.fileToList();
+        modelo = dataBaseHandler.obtenerPreguntas();
+
 
         System.out.println("El tamanio es " + modelo.size());
 
@@ -55,12 +50,10 @@ public class Main {
         vistaInicio.setVisible(true);*/
 
          
-        InicioVista vistaInicio = new InicioVista(fileHandler);
+        //InicioVista vistaInicio = new InicioVista(fileHandler);
+        InicioVista vistaInicio = new InicioVista(dataBaseHandler);
         InicioControlador controlador = new InicioControlador(modelo, vistaInicio);
         vistaInicio.setControlador(controlador);
-
-
-
         
     }
 }

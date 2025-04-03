@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Programacion2/Proyectos/PreguntasDelCursoMVC/PreguntasDelCursoMVC.iml" filepath="$PROJECT_DIR$/Programacion2/Proyectos/PreguntasDelCursoMVC/PreguntasDelCursoMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SolMendez2024.iml" filepath="$PROJECT_DIR$/.idea/SolMendez2024.iml" />
     </modules>
   </component>

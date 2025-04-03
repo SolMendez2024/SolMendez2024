@@ -8,8 +8,10 @@ package com.cerp.Modelo;
  */
 
  import java.io.Serializable;
+ import java.util.ArrayList;
+ import java.util.List;
 
- /**
+/**
   * @class Pregunta
   * @brief Clase para representar una pregunta en el juego de preguntas y respuestas.
   * Implementa Serializable para poder ser guardada en un archivo.
@@ -18,14 +20,15 @@ package com.cerp.Modelo;
     private int idPregunta; // índice de la pregunta
     private String pregunta; // pregunta
     private String correcta; // respuesta correcta
-    private String[] opciones; // opciones posibles
+    //private String[] opciones; // opciones posibles
+     private List<String> opciones = new ArrayList<>();
 
-    public void setOpciones(String[] opciones) {
+    public void setOpciones(List<String> opciones) {
         this.opciones = opciones;
     }
 
 
-    public Pregunta(int idPregunta, String pregunta, String correcta, String[] opciones) {
+    public Pregunta(int idPregunta, String pregunta, String correcta, List<String> opciones) {
         this.idPregunta = idPregunta;
         this.pregunta = pregunta;
         this.correcta = correcta;
@@ -84,7 +87,7 @@ package com.cerp.Modelo;
      * Getter para obtener las opciones posibles.
      * @return String[] que contiene las opciones posibles.
      */
-    public String[] getOpciones() {
+    public List<String> getOpciones() {
         return opciones;
     }
 
@@ -102,7 +105,7 @@ package com.cerp.Modelo;
         int idPregunta = Integer.parseInt(fields[0]);
         String pregunta = fields[1];
         String correcta = fields[2];
-        String[] opciones = fields[3].split(",");
+        List<String> opciones = new ArrayList<>();
     
         return new Pregunta(idPregunta, pregunta, correcta, opciones);
     }
